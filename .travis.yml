@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: SRSeTQuUoykyWk8bu6lLioZuIrnLLqWKIAhIRxFh+8wgw+cwpgOtOZVnFJPjNhcNucRGIPIYr/KxGmdklq9rp/T3icmHIfRVJAc5nC1VmxXNPXBoIUlOWJzT1hYvWKHMCTjbTAjcTbhacqxQdrViX/3kiDaRJ1rjzV2SQlYmSMbyuRgC7w8h9bLX5/V+yrzqQPBa8l5hpjCHYK40W3MNo0x2eNCk/IbXRUTS58dCU0TBF9tdftM8VhNUuPKZ1regCIYQT4cooUjQNc6h6wfxHis/9msd+wLWnlLlv3LLDDelRyNk9+Xr3rP45RapTXpqjYQK/p8gqOcQp+sjbEe+Rvaz96HMx7YykhwH3EOn6VG2b6Nz71ms14+3VkRV4sBUDjxoaDsNHHUzowZaSOT5cG8EQNw9kxZxqUzuAPJB2n4jmvYy6L2XOryXixNVFn0t2diY1H8KQa0n7sfwJ8B8D8yJR2yTYs687QBOBqNUgMzu7wHEMIiwuHNbVuo8EaQkZovOtueHE5Hzw9DYtNBAo6Z5OZU8VKJWjjNhkbkEPEOYSkJbmKJMS7XmLPcnVPm3aO7cUiJ+zNwvaRCFEkzGzg3xbYslbkYEzzfhiNQdI9DNkf0mob4++dBGy/5RiPPVK1+Wr9v1cXvtMHaB5pR17/YloLBsw8kKnRf0p2ai9is=
+  app: secret-sands-82898
+  on:
+    repo: Bushmb/BlogPosts-API
