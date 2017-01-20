@@ -10,7 +10,7 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 
-describe('Shopping List', function() {
+describe('Blog Posts', function() {
 
   // Before our tests run, we activate the server. Our `runServer`
   // function returns a promise, and we return the that promise by
@@ -93,12 +93,14 @@ describe('Shopping List', function() {
     // we can make a second, PUT call to the app.
     const updateData = {
       title: 'another blog post 2',
-      content: 'some more stuff'
+      content: 'some more stuff',
+      author: 'emily dickenson',
+      publishDate: '2017-01-19'
     };
 
     return chai.request(app)
       // first have to get so we have an idea of object to update
-      .get('/shopping-list')
+      .get('/blog-posts')
       .then(function(res) {
         updateData.id = res.body[0].id;
         // this will return a promise whose value will be the response
@@ -113,10 +115,10 @@ describe('Shopping List', function() {
       // prove that the PUT request has right status code
       // and returns updated item
       .then(function(res) {
-        res.should.have.status(200);
-        res.should.be.json;
+        res.should.have.status(204);
+        // res.should.be.json;
         res.body.should.be.a('object');
-        res.body.should.deep.equal(updateData);
+        // res.body.should.deep.equal(updateData);
       });
   });
 
