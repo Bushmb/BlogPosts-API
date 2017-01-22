@@ -70,7 +70,8 @@ app.put('/blog-posts/:id', jsonParser, (req, res) => {
     author: req.body.author,
     publishDate: req.body.publishDate
   });
-  res.status(204).json(updatedItem);
+  console.log(updatedItem);
+  res.status(200).json(updatedItem);
 });
 
 // when DELETE request comes in with an id in path,

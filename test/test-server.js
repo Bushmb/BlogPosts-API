@@ -86,7 +86,8 @@ describe('Blog Posts', function() {
   //  4. Make a PUT request with `updateData`
   //  5. Inspect the response object to ensure it
   //  has right status code and that we get back an updated
-  //  item with the right data in it.
+  //  item with the right data in it
+
   it('should update items on PUT', function() {
     // we initialize our updateData here and then after the initial
     // request to the app, we update it with an `id` property so
@@ -115,10 +116,10 @@ describe('Blog Posts', function() {
       // prove that the PUT request has right status code
       // and returns updated item
       .then(function(res) {
-        res.should.have.status(204);
-        // res.should.be.json;
+        res.should.have.status(200);
+        res.should.be.json;
         res.body.should.be.a('object');
-        // res.body.should.deep.equal(updateData);
+        res.body.should.deep.equal(updateData);
       });
   });
 
